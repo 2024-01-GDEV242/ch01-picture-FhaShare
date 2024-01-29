@@ -23,8 +23,7 @@ public class Picture
     private Circle outlineEye;
     private Circle whiteEye1;
     private Circle blackEye1;
-    private Square whiteEye2;
-    private Circle blackEye2;
+    private Circle whiteEye2;
     private Triangle topMouth;
     private Triangle bottomMouth;
     private boolean drawn;
@@ -46,8 +45,7 @@ public class Picture
         outlineEye = new Circle();
         whiteEye1 = new Circle();
         blackEye1 = new Circle();
-        whiteEye2 = new Square();
-        blackEye2 = new Circle();
+        whiteEye2 = new Circle();
         topMouth = new Triangle();
         bottomMouth = new Triangle();      
         drawn = false;
@@ -59,20 +57,109 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            Person leg = new Person();
             leg.makeVisible();
-            leg.changeSize(50, 100);
-            leg.moveVertical(60);
+            leg.changeSize(100, 50);
+            leg.moveVertical(35);
             leg.moveHorizontal(-30);
-            
-    
             drawn = true;
             
-         
+            topHead.makeVisible();
+            topHead.changeSize(160);
+            topHead.changeColor("blueBird");
+            topHead.moveVertical(-80);
+            topHead.moveHorizontal(-90);
             drawn = true;
             
-           
+            eraseHead.makeVisible();
+            eraseHead.changeSize(100);
+            eraseHead.moveHorizontal(-200);
+            eraseHead.moveVertical(-30);
+            eraseHead.changeColor("white");
             drawn = true;
+            
+            bottomHead.makeVisible();
+            bottomHead.changeSize(-120, 140);
+            bottomHead.changeColor("skyBlue");
+            bottomHead.moveVertical(70);
+            bottomHead.moveHorizontal(-5);
+            drawn = true;
+            
+            bottomBody.makeVisible();
+            bottomBody.changeSize(180);
+            bottomBody.moveHorizontal(-70);
+            bottomBody.moveVertical(10);
+            bottomBody.changeColor("skyBlue");
+            drawn = true;
+            
+            topBody.makeVisible();
+            topBody.changeColor("lightBlue");
+            topBody.changeSize(150);
+            topBody.moveVertical(35);
+            topBody.moveHorizontal(-35);
+            drawn = true;
+            
+            insideWing.makeVisible();
+            insideWing.changeSize(230);
+            insideWing.moveVertical(-55);
+            insideWing.changeColor("blueBird");
+            insideWing.moveHorizontal(20);
+            drawn = true;
+            
+            outsideWing.makeVisible();
+            outsideWing.changeColor("darkBlue");
+            outsideWing.changeSize(200);
+            outsideWing.moveHorizontal(70);
+            outsideWing.moveVertical(-15);
+            drawn = true;
+            
+            eraseWing.makeVisible();
+            eraseWing.changeSize(-300, 400);
+            eraseWing.moveVertical(195);
+            eraseWing.moveHorizontal(268);
+            eraseWing.changeColor("white");
+            drawn = true;
+            
+            outlineEye.makeVisible();
+            outlineEye.changeSize(60);
+            outlineEye.changeColor("black");
+            outlineEye.moveVertical(-40);
+            outlineEye.moveHorizontal(-50);
+            drawn = true;
+            
+            whiteEye1.makeVisible();
+            whiteEye1.changeSize(52);
+            whiteEye1.changeColor("white");
+            whiteEye1.moveVertical(-36);
+            whiteEye1.moveHorizontal(-46);
+            drawn = true;
+            
+            blackEye1.makeVisible();
+            blackEye1.changeSize(35);
+            blackEye1.changeColor("black");
+            blackEye1.moveHorizontal(-40);
+            blackEye1.moveVertical(-25);
+            drawn = true;
+            
+            whiteEye2.makeVisible();
+            whiteEye2.changeSize(25);
+            whiteEye2.changeColor("white");
+            whiteEye2.moveVertical(-30);
+            whiteEye2.moveHorizontal(-30);
+            drawn = true;
+            
+            topMouth.makeVisible();
+            topMouth.changeSize(20, 80);
+            topMouth.changeColor("black");
+            topMouth.moveVertical(-60);
+            topMouth.moveHorizontal(-70);
+            
+            bottomMouth.makeVisible();
+            bottomMouth.changeColor("gray4");
+            bottomMouth.changeSize(-15, 70);
+            bottomMouth.moveVertical(-25);
+            bottomMouth.moveHorizontal(-70);
+            
+            
         }
     }
 
