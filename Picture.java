@@ -168,24 +168,24 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-            topHead.changeColor("gray3");
-            eraseHead.changeColor("white");
-            bottomHead.changeColor("gray1");
+        topHead.changeColor("gray3");
+        eraseHead.changeColor("white");
+        bottomHead.changeColor("gray1");
 
-            bottomBody.changeColor("gray1");
-            topBody.changeColor("gray2");
+        bottomBody.changeColor("gray1");
+        topBody.changeColor("gray2");
           
-            insideWing.changeColor("gray3");
-            outsideWing.changeColor("gray4");
-            eraseWing.changeColor("white");
+        insideWing.changeColor("gray3");
+        outsideWing.changeColor("gray4");
+        eraseWing.changeColor("white");
 
-            outlineEye.changeColor("black");
-            whiteEye1.changeColor("white");
-            blackEye1.changeColor("black");
-            whiteEye2.changeColor("white");
+        outlineEye.changeColor("black");
+        whiteEye1.changeColor("white");
+        blackEye1.changeColor("black");
+        whiteEye2.changeColor("white");
 
-            topMouth.changeColor("black");
-            bottomMouth.changeColor("gray4");
+        topMouth.changeColor("black");
+        bottomMouth.changeColor("gray4");
     }
 
     /**
@@ -193,15 +193,24 @@ public class Picture
      */
     public void setColor()
     {
-    
-    }
-    
-    /**
-     * Draw sunset picture
-     */
-    public void drawSunset()
-    {
-     
+        topHead.changeColor("lightRed");
+        eraseHead.changeColor("white");
+        bottomHead.changeColor("lightPink");
+
+        bottomBody.changeColor("lightPink");
+        topBody.changeColor("pink");
+          
+        insideWing.changeColor("lightRed");
+        outsideWing.changeColor("darkRed");
+        eraseWing.changeColor("white");
+
+        outlineEye.changeColor("black");
+        whiteEye1.changeColor("white");
+        blackEye1.changeColor("black");
+        whiteEye2.changeColor("white");
+
+        topMouth.changeColor("black");
+        bottomMouth.changeColor("gray4");
     }
 }
 
