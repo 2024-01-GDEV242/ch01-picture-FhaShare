@@ -9,6 +9,10 @@
  * @author  Fhaungfha Suvannakajorn
  * @version 2024.01.29
  */
+
+/**
+* Drawing the BlueJ bird picture using the draw method. 
+*/
 public class Picture
 {
     private Person leg;
@@ -52,7 +56,7 @@ public class Picture
     }
 
     /**
-     * Draw this picture.
+     * Draw BlueJ bird picture.
      */
     public void draw()
     {
@@ -189,7 +193,7 @@ public class Picture
     }
 
     /**
-     * Change this picture to use color display
+     * Change the bird picture to other color by use color display
      */
     public void setColor()
     {
