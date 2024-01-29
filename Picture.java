@@ -152,14 +152,14 @@ public class Picture
             topMouth.changeColor("black");
             topMouth.moveVertical(-60);
             topMouth.moveHorizontal(-70);
+            drawn = true;
             
             bottomMouth.makeVisible();
             bottomMouth.changeColor("gray4");
             bottomMouth.changeSize(-15, 70);
             bottomMouth.moveVertical(-25);
             bottomMouth.moveHorizontal(-70);
-            
-            
+            drawn = true;
         }
     }
 
@@ -168,7 +168,12 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-
+        topHead.changeColor("gray3");
+        bottomHead.changeColor("gray1");
+        bottomBody.changeColor("gray1");
+        topBody.changeColor("gray2");
+        insideWing.changeColor("gray3");
+        outsideWing.changeColor("gray4");
     }
 
     /**
