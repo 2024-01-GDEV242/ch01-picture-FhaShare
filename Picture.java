@@ -59,8 +59,12 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-           
-    
+            Person leg = new Person();
+            leg.makeVisible();
+            leg.changeSize(50, 100);
+            leg.moveVertical(60);
+            leg.moveHorizontal(-30);
+            
     
             drawn = true;
             
