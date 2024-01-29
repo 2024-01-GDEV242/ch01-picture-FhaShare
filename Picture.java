@@ -168,12 +168,24 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        topHead.changeColor("gray3");
-        bottomHead.changeColor("gray1");
-        bottomBody.changeColor("gray1");
-        topBody.changeColor("gray2");
-        insideWing.changeColor("gray3");
-        outsideWing.changeColor("gray4");
+            topHead.changeColor("gray3");
+            eraseHead.changeColor("white");
+            bottomHead.changeColor("gray1");
+
+            bottomBody.changeColor("gray1");
+            topBody.changeColor("gray2");
+          
+            insideWing.changeColor("gray3");
+            outsideWing.changeColor("gray4");
+            eraseWing.changeColor("white");
+
+            outlineEye.changeColor("black");
+            whiteEye1.changeColor("white");
+            blackEye1.changeColor("black");
+            whiteEye2.changeColor("white");
+
+            topMouth.changeColor("black");
+            bottomMouth.changeColor("gray4");
     }
 
     /**
