@@ -6,15 +6,30 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Fhaungfha Suvannakajorn
+ * @version 2024.01.29
  */
+
+/**
+* Drawing the BlueJ bird picture using the draw method. 
+*/
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Person leg;
+    private Circle topHead;
+    private Square eraseHead;
+    private Triangle bottomHead;
+    private Circle bottomBody;
+    private Circle topBody;
+    private Circle insideWing;
+    private Circle outsideWing;
+    private Triangle eraseWing;
+    private Circle outlineEye;
+    private Circle whiteEye1;
+    private Circle blackEye1;
+    private Circle whiteEye2;
+    private Triangle topMouth;
+    private Triangle bottomMouth;
     private boolean drawn;
 
     /**
@@ -22,40 +37,132 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        leg = new Person();
+        topHead = new Circle();
+        eraseHead = new Square();
+        bottomHead = new Triangle();
+        bottomBody = new Circle();
+        topBody = new Circle();
+        insideWing = new Circle();
+        outsideWing = new Circle();
+        eraseWing = new Triangle();
+        outlineEye = new Circle();
+        whiteEye1 = new Circle();
+        blackEye1 = new Circle();
+        whiteEye2 = new Circle();
+        topMouth = new Triangle();
+        bottomMouth = new Triangle();      
         drawn = false;
     }
 
     /**
-     * Draw this picture.
+     * Draw BlueJ bird picture.
      */
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            leg.makeVisible();
+            leg.changeSize(100, 50);
+            leg.moveVertical(35);
+            leg.moveHorizontal(-30);
+            drawn = true;
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            topHead.makeVisible();
+            topHead.changeSize(160);
+            topHead.changeColor("blueBird");
+            topHead.moveVertical(-80);
+            topHead.moveHorizontal(-90);
+            drawn = true;
+            
+            eraseHead.makeVisible();
+            eraseHead.changeSize(100);
+            eraseHead.moveHorizontal(-200);
+            eraseHead.moveVertical(-30);
+            eraseHead.changeColor("white");
+            drawn = true;
+            
+            bottomHead.makeVisible();
+            bottomHead.changeSize(-120, 140);
+            bottomHead.changeColor("skyBlue");
+            bottomHead.moveVertical(70);
+            bottomHead.moveHorizontal(-5);
+            drawn = true;
+            
+            bottomBody.makeVisible();
+            bottomBody.changeSize(180);
+            bottomBody.moveHorizontal(-70);
+            bottomBody.moveVertical(10);
+            bottomBody.changeColor("skyBlue");
+            drawn = true;
+            
+            topBody.makeVisible();
+            topBody.changeColor("lightBlue");
+            topBody.changeSize(150);
+            topBody.moveVertical(35);
+            topBody.moveHorizontal(-35);
+            drawn = true;
+            
+            insideWing.makeVisible();
+            insideWing.changeSize(230);
+            insideWing.moveVertical(-55);
+            insideWing.changeColor("blueBird");
+            insideWing.moveHorizontal(20);
+            drawn = true;
+            
+            outsideWing.makeVisible();
+            outsideWing.changeColor("darkBlue");
+            outsideWing.changeSize(200);
+            outsideWing.moveHorizontal(70);
+            outsideWing.moveVertical(-15);
+            drawn = true;
+            
+            eraseWing.makeVisible();
+            eraseWing.changeSize(-300, 400);
+            eraseWing.moveVertical(195);
+            eraseWing.moveHorizontal(268);
+            eraseWing.changeColor("white");
+            drawn = true;
+            
+            outlineEye.makeVisible();
+            outlineEye.changeSize(60);
+            outlineEye.changeColor("black");
+            outlineEye.moveVertical(-40);
+            outlineEye.moveHorizontal(-50);
+            drawn = true;
+            
+            whiteEye1.makeVisible();
+            whiteEye1.changeSize(52);
+            whiteEye1.changeColor("white");
+            whiteEye1.moveVertical(-36);
+            whiteEye1.moveHorizontal(-46);
+            drawn = true;
+            
+            blackEye1.makeVisible();
+            blackEye1.changeSize(35);
+            blackEye1.changeColor("black");
+            blackEye1.moveHorizontal(-40);
+            blackEye1.moveVertical(-25);
+            drawn = true;
+            
+            whiteEye2.makeVisible();
+            whiteEye2.changeSize(25);
+            whiteEye2.changeColor("white");
+            whiteEye2.moveVertical(-30);
+            whiteEye2.moveHorizontal(-30);
+            drawn = true;
+            
+            topMouth.makeVisible();
+            topMouth.changeSize(20, 80);
+            topMouth.changeColor("black");
+            topMouth.moveVertical(-60);
+            topMouth.moveHorizontal(-70);
+            drawn = true;
+            
+            bottomMouth.makeVisible();
+            bottomMouth.changeColor("gray4");
+            bottomMouth.changeSize(-15, 70);
+            bottomMouth.moveVertical(-25);
+            bottomMouth.moveHorizontal(-70);
             drawn = true;
         }
     }
@@ -65,20 +172,49 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        topHead.changeColor("gray3");
+        eraseHead.changeColor("white");
+        bottomHead.changeColor("gray1");
+
+        bottomBody.changeColor("gray1");
+        topBody.changeColor("gray2");
+          
+        insideWing.changeColor("gray3");
+        outsideWing.changeColor("gray4");
+        eraseWing.changeColor("white");
+
+        outlineEye.changeColor("black");
+        whiteEye1.changeColor("white");
+        blackEye1.changeColor("black");
+        whiteEye2.changeColor("white");
+
+        topMouth.changeColor("black");
+        bottomMouth.changeColor("gray4");
     }
 
     /**
-     * Change this picture to use color display
+     * Change the bird picture to other color by use color display
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        topHead.changeColor("lightRed");
+        eraseHead.changeColor("white");
+        bottomHead.changeColor("lightPink");
+
+        bottomBody.changeColor("lightPink");
+        topBody.changeColor("pink");
+          
+        insideWing.changeColor("lightRed");
+        outsideWing.changeColor("darkRed");
+        eraseWing.changeColor("white");
+
+        outlineEye.changeColor("black");
+        whiteEye1.changeColor("white");
+        blackEye1.changeColor("black");
+        whiteEye2.changeColor("white");
+
+        topMouth.changeColor("black");
+        bottomMouth.changeColor("gray4");
     }
 }
+
